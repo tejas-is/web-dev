@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+.main{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../vinyas\ wallpaper.jpg);
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+nav{
+    width: 80%;
+    position: sticky;
+    margin: 0 auto;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px 20px;
+
+}
+
+.nav-links ul li a{
+    color:white;
+    text-decoration: none;
+}
+
+
+
+
+.info{
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.overlay{
+    width: 0;
+    height: 0;
+    border-top: 500px solid white;
+    border-right:500px solid transparent;
+    border-bottom: 500px solid white;
+    border-left: 500px solid white;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.title{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translate(-50%,-50%);
+}
+
+.title h1{
+    font-size: 80px;
+    margin-top: 250px;
+    margin-left: 180px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+  
+}
+
+.title h1 span{
+    color: #ff004f;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 90px;
+}
+#circle{
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    top: 7;
+    left: -500;
+   border-radius: 50%;
+   transform: rotate(0deg);
+   transition: 1s;
+    
+}
+.feature i{
+    width: 70px;
+    font-size: 30px;
+    
+    color:white;
+}
+.feature{
+    position: absolute;
+    display: flex;
+}
+.feature div{
+    margin-left:0px ;
+}
+.feature div span{
+    margin-top: 8px;
+}
+
+.info div i.fa-desktop{
+    margin: -110px -800px;
+    font-size: 70px;
+}
+.one{
+    top: 550px;
+    right: -900px;;
+}
+
+.info div i.fa-database{
+    margin: 200px 400px;
+    top: 550px;
+    font-size: 70px;
+
+}
+.two{
+    top: 550px;
+    left: 100px;
+    transform: rotate(90deg);
+
+}
+.info div i.fa-server{
+    margin: 40px -250px;
+    font-size: 70px
+
+}
+
+.three {
+    margin: 500px 20px;
+    transform: rotate(-180deg);
+    
+}
+
+.info div i.fa-book{
+    margin: 420px -250px;
+    font-size: 70px;
+    position: absolute;
+
+}
+.four{
+    margin:0;
+    transform: rotate(270deg);
+}
+.one h1{
+    color: white;
+    margin: -100px 860px;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    
+    
+}
+
+
+
+
+.two h1{
+    color:white;
+    margin: -50px 100px;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+.three h1{
+    margin: -65px 110px;
+    color:white;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.four h1{
+    margin: -70px 100px;
+    color: white;
+    left: 520px;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+span{
+    color:aliceblue;
+    font-size: 20px;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+.user{
+    width: 350px;
+    position: absolute;
+    top: 48%;
+    left: 20%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+.controls{
+    position: absolute;
+    font-size: 30px;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+.controls h3{
+    margin: 15px 0;
+    color: aliceblue;
+    font-size: 20px;
+}
+
+#upBtn{
+    width: 15px;
+    cursor: pointer;
+    color: aliceblue;
+}
+
+#downBtn{
+    width: 15px;
+    cursor: pointer;
+    transform: rotate();
+    color: white;
+}
+
+
+
+    
+

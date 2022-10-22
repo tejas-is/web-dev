@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        MY PAGE
+    </title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://kit.fontawesome.com/4254b60de1.js" crossorigin="anonymous"></script>
+    <style>
+        ::placeholder {
+          color: rgb(255, 255, 255);
+          opacity: 1; /* Firefox */
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <div class="main">
+            <nav>
+             
+            <ul id="sidemenu">
+                <li class="active"></li><a href="#">HOME</a></li>
+                <li><a href="#about">EDUCATION</a></li>
+                <li><a href="#about">SKILLS</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+                
+            </ul>
+            
+        </div>
+          </nav>
+        <div class="title">
+            <h1>
+                Hi,I'm <span>Tejas</span><br>From Bangalore.
+            </h1>
+
+        </div>
+      
+    </header>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="user.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        I'm an enthusiastic learner,with a quick grasping ability. Highly interested in familiarizing myslef with new advancements in Technology and constant obsession with their Functionality. A multi-tasker and a perseverant, aiming at near perfection with every work of mine.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Front-end</span><br>HTML,CSS,Javascript</li>
+                            <li><span>Back-end</span><br>SQL</li>
+                            <li><span>Server</span><br>C,C++,Python,Golang</li>
+                        </ul>
+
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023</span><br>Vemana Institute Of Technology<br>Information Science Engineering</li>
+                            <li><span>2019</span><br>Christ Junior College<br>PCME</li>
+                            
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="projects">
+        <div class="container">
+           <h1 class="sub-title">My Projects</h1> 
+           <div class="projects-list">
+            <div>
+                <i class="fa-solid fa-person-running"></i>
+                
+                <h2>Diet Tracker</h2>
+                <p>An web application developed using sql,html and css to keep track of users diet on a daily, monthly, or in yearly basis.</p>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>Devolopmental Bidding</h2>
+                <p>An web application developed using python Flask, html and css that allows the interested clients to take part in bidding session to grab the development project contracts.</p>
+            </div>
+           </div>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">My Contact</h1>
+                    <p><i class="fa-sharp fa-solid fa-paper-plane"></i>istejas2001@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>7760749201</p>
+                    <div class="social-icons">
+                        <a href="https://instagram.com/__tejas.15__?igshid=YmMyMTA2M2Y="><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://angel.co/u/tejas-naik-8"><i class="fa-brands fa-angellist"></i></a>
+                        <a href="https://www.linkedin.com/in/tejas-naik-491b17186/"><i class="fa-brands fa-linkedin"></i></a>
+
+                    </div>
+                    <a href="CV-T2.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+
+                </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+   <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+   </script>
+   <script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0"
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px"
+    }
+   </script>
+   <!--<form name="submit-to-google-sheet">
+    <input name="email" type="email" placeholder="Email" required>
+    <button type="submit">Send</button>
+  </form>-->
+  
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbynt6uvUxXhy8IbfLbdQ1DDk_o0ME_78rwy5ME3uK5Gzu37dMs3AmF8XpPTJcDWlbPWTg/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
